@@ -1,8 +1,7 @@
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits } = require('discord.js');
 
-// I am supposed to make use of .env but this app will be deleted after the interview
-const { token } = require('./config.json');
+// const { token } = require('./config.json');
 
 
 // Create a new client instance
@@ -33,4 +32,4 @@ client.on('interactionCreate', async interaction => {
 
 
 // Login to Discord with your client's token
-client.login(token);
+client.login(process.env.DJS_TOKEN);
